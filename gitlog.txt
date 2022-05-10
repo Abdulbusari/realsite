@@ -1,0 +1,164 @@
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   new.html
+        modified:   style/base.css
+        modified:   style/index.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitlog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git add .
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   gitlog.txt
+        modified:   new.html
+        modified:   style/base.css
+        modified:   style/index.css
+
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git commmit -m 'add files' 
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git commit -m 'add files'
+[main 7d5e6b4] add files
+ Committer: Abdulahi Busari (719717) <ABusari@smail.pembinatrails.ca>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 72 insertions(+), 19 deletions(-)
+ create mode 100644 gitlog.txt
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git push -m 
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git push -u
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git push -u origin main
+To https://github.com/Abdulbusari/abdulbusari.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Abdulbusari/abdulbusari.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git log
+commit 7d5e6b4c32d125bbcbd37060cb384c0c57834dc3 (HEAD -> main)
+Author: Abdulahi Busari (719717) <ABusari@smail.pembinatrails.ca>
+Date:   Tue May 10 14:03:38 2022 -0500
+
+    add files
+
+commit d82db920f4e85fc9fafb25dfdc68c6cdfc4dcbbf
+Author: Abdulahi Busari (719717) <ABusari@smail.pembinatrails.ca>
+Date:   Mon May 9 20:09:53 2022 -0500
+
+    Initial Commit
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git remote remove origin
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git init
+Reinitialized existing Git repository in D:/my website/.git/
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git commit -m "first commit" 
+On branch main
+nothing to commit, working tree clean
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git branch -M main
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git remote add origin https://github.com/Abdulbusari/realsite.git
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git push -u origin main
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (19/19), 1.23 MiB | 1.31 MiB/s, done.
+Total 19 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/Abdulbusari/realsite.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+ABusari@EC-NSSCH-182186 MINGW64 /d/my website (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
