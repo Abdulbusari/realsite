@@ -90,9 +90,9 @@ nav ul li + li {
 margin-left: 25px;
 }
 
-.mobile-nav {
+/* .mobile-nav {
 overflow: hidden;
-}
+} */
 
 .mobile-nav p i {
 margin-top: 15px;
@@ -249,10 +249,12 @@ nav {
 display: none;
 }
 .mobile-nav {
+    height: 40%;
 display: block;
 }
-.herotext h1 {
+h1 {
 font-size: 40px;
+margin-top: 200px;
 }
 .herotext h3 {
 font-size: 20px;
@@ -273,8 +275,9 @@ display: none;
 .mobile-nav {
 display: block;
 }
-.herotext h1 {
+ h1 {
 font-size: 50px;
+margin-top: 200px;
 }
 .content-img {
 height: 400px;
@@ -302,6 +305,7 @@ display: none;
 }
 .herotext h1 {
 font-size: 60px;
+margin-top: 200px;
 }
 .herotext h3 {
 font-size: 30px;

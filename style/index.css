@@ -15,7 +15,9 @@
   
   /* make the nav go all the way across the screen, and a position of abosolute */
   .banner-text {
+    height: 100%;
     width: 100%;
+    display: grid;
     position: absolute;
     z-index: 1;
 
@@ -45,10 +47,11 @@
     margin-top: 20%;
   }
   
-  /* gives it a background of these colour and width 100% and height of 100vh */
+  /* gives it a background of these colour and width 100% and height of 100vh
+   #F44369, #3E3B92 */
   .animation-area {
   
-    background: linear-gradient(to left, #c4c4c4, #1f1f1f);
+    background: linear-gradient(to left, #F44369, #3E3B92);
     width: 100%;
     height: 100vh;
   }
@@ -244,3 +247,38 @@ h2 {
         margin-top: 50px;
       }
       
+      
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #000000;}
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
