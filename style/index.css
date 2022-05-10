@@ -1,0 +1,246 @@
+@import "base.css";
+
+/*use this tutorial to do this https://www.youtube.com/watch?v=5RoXCs54CN8 */
+/*makes the margin and padding 0 */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* make all the text this font*/
+  body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: white;
+  }
+  
+  /* make the nav go all the way across the screen, and a position of abosolute */
+  .banner-text {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+
+  }
+  
+  .banner-text ul {
+    height: 50px;
+    float: right;
+  }
+  
+  .banner-text ul li {
+    display: inline-block;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .banner-text ul li:hover {
+    cursor: pointer;
+  }
+  
+    .banner-h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: 20%;
+  }
+  
+  /* gives it a background of these colour and width 100% and height of 100vh */
+  .animation-area {
+  
+    background: linear-gradient(to left, #c4c4c4, #1f1f1f);
+    width: 100%;
+    height: 100vh;
+  }
+  
+
+  .box-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+  }
+  
+  .box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: #161616;
+    -webkit-animation: animate 20s linear infinite;
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+  }
+  
+  .box-area li:nth-child(1) {
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  
+  .box-area li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+  }
+  
+  .box-area li:nth-child(3) {
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation-delay: 5.5s;
+    animation-delay: 5.5s;
+  }
+  
+  .box-area li:nth-child(4) {
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+  }
+  
+  .box-area li:nth-child(5) {
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  
+  .box-area li:nth-child(6) {
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+  }
+  
+  /* controls the animatation at the start*/
+  @-webkit-keyframes animate {
+    0% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-800px) rotate(360deg);
+      transform: translateY(-800px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  @keyframes animate {
+    0% {
+      -webkit-transform: translateY(0) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-800px) rotate(360deg);
+      transform: translateY(-800px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  #about{
+    background-color: #4d79ff;
+  }
+  #about img{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin: auto;
+    width:200px;
+    height:200px;
+    border: 2px solid #fff;
+    
+  }
+  .content-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+
+.img-circle{
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 350px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    margin-top: 20px;
+  }
+  
+
+  .content {
+    margin-top: 9px;
+    font-size: 18px;
+    color: #303336;
+    font-weight: 500;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20%;
+    text-align: center;
+    width: 70%;
+}
+
+    .content p{
+        margin: 0px auto;
+        width: 100%;
+
+    }
+    .herotext{
+        margin-top: 11%;
+        color: white;
+    }
+
+    .herotext2{
+        color: white;
+    }
+    .herotext4{
+        color: white;
+    }
+
+    .herotext3{
+        margin-bottom: 20%;
+        color: white;
+    }
+    h1 {
+        text-align: center;
+        color: black;
+        font-size: 15px;
+        margin-top: 20px;
+      }
+
+      h3 {
+        text-align: center;
+        color: black;
+        font-size: 50px;
+        margin-top: 50px;
+      }
+      
